@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="fav icon" href="logo.png">
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"  rel="stylesheet">
+    <title>YodaArts | Pagamento</title>
+</head>
+<body>
+    <main id="payment">
+    <section class="payment">
+            <button id="myBtn"><i class="fas fa-globe"></i><span style="margin: 0 10px;">Language</span></button>
+
+            <div id="myModal" class="modal">
+            
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Select your region and language</h1>
+                <ul>
+                    <li><img src="brazilflag.png"><a href="https://pormazion.github.io/resgatarcódigo/index.html">Português</a></li>
+                    <li title="You already have this language!" style="cursor: not-allowed;"><img src="usaflag.png" style="filter: saturate(0);"><a style="cursor: not-allowed">English</a></li>
+                </ul>
+              </div>
+            
+            </div>
+        <img src="logo.png">
+        <div class="payment_message">
+            <h1>Thank you for your purchase!</h1>
+            <h2>Your payment has been confirmed. Contact us via email <p style="margin: 30px 0px 30px 0px;"><span>pormazion.foxy@gmail.com</span></p> to verify your identity and send us your access code!</h2>
+            <h3>To download your product enter the passcode below!</h3>
+            <div class="tooltip"><i class="fas fa-info-circle"></i>
+                <span class="tooltiptext">If you do not have any code you may not have sent us the email to validate your access!</span>
+            </div>
+        <input type="text" placeholder="PassCode" id="acesscode" value=""><i class="far fa-arrow-alt-circle-right" onclick="validateCode()" style="margin-left: -30px;"></i>
+
+        </div></section></main>
+
+        <script>
+            var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+        function validateCode(){
+        var code = document.getElementById("acesscode").value;
+        var alert = document.getElementById('acesscode');
+        if (code == "J43iobl5"){
+        alert.style.background = 'rgb(125, 233, 143)';
+        window.location.assign("https://drive.google.com/open?id=187xPHh6LqML9EV9D_3xsO0IRF99G5Rt4");
+        }
+        else if (code == "Hfd432ji"){
+        alert.style.background = 'rgb(125, 233, 143)';
+        window.location.assign("https://drive.google.com/open?id=1vScMEwCK3BgPGs8drJuaU4mwWCpmt4Xa");
+        }
+        else if (code == "H2309erm"){
+        alert.style.background = 'rgb(125, 233, 143)';
+        window.location.assign("https://drive.google.com/open?id=1OBXF9fN3oRB2BhTGQ-VYWVdAVTdXJJRo");
+        }
+        else{
+        alert.style.background = 'rgb(247, 89, 89)';
+        setTimeout(function(){
+        alert.style.background = 'rgb(228, 228, 228)';
+        }, 2000);
+        }}
+        </script>
+
+</body>
+</html>
